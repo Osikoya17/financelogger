@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+    color: rgb(238, 58, 208);
+}
+form{
+    height: 200px;
+    background-color: #d6d6d6;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding:2rem
+}
+select,input{
+    margin: 10px;
+    height: 25px;
+    border-radius: 4px;
+    border: none;
+}
+select:focus,input:focus{
+    outline: 1px solid rgb(124, 124, 124);
+}
+div{
+    margin-top: 30px;
+    padding: 2rem;
+}
+div button{
+    background-color: rgb(238, 58, 208);
+    color: white;
+    border: none;
+    width: 55px;
+    height: 25px;
+    border-radius: 4px;
+}
+a{
+    color: gray;
+}
