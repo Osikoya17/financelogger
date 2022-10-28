@@ -33,3 +33,16 @@ div button{
 a{
     color: gray;
 }
+ul{
+    padding: 15px;
+    list-style: none;
+}
+ul>li>h4{
+    color: rgb(238, 58, 208);
+    font-weight: 1000
+}
+li{
+   
+    border: 1px solid grey;
+    padding: 10px;
+}
