@@ -42,13 +42,16 @@ const amount= document.querySelector('#amount') as HTMLInputElement
 
 from.addEventListener("submit",(e:Event)=>{
     e.preventDefault()
+    //Tuples 
+    let value:[string,string,number]
+    value = [tofrom.value,details.value,Number(amount.value)]
     let doc:HasFormatter
 if (type.value === 'Invoice'){
-    doc = new Invoice(tofrom.value,details.value,Number(amount.value))
+    doc = new Invoice(...value)//Spread Operators
     console.log(doc);
 }
 else{
-    doc  = new Payment(tofrom.value,details.value,Number(amount.value))
+    doc  = new Payment(...value)
     console.log(doc);
     
 }

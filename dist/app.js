@@ -30,13 +30,16 @@ const details = document.querySelector('#details');
 const amount = document.querySelector('#amount');
 from.addEventListener("submit", (e) => {
     e.preventDefault();
+    //Tuples 
+    let value;
+    value = [tofrom.value, details.value, Number(amount.value)];
     let doc;
     if (type.value === 'Invoice') {
-        doc = new Invoice(tofrom.value, details.value, Number(amount.value));
+        doc = new Invoice(...value); //Spread Operators
         console.log(doc);
     }
     else {
-        doc = new Payment(tofrom.value, details.value, Number(amount.value));
+        doc = new Payment(...value);
         console.log(doc);
     }
     list.render(doc, type.value, 'end');
